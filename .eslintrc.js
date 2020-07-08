@@ -12,7 +12,7 @@ module.exports = {
           atoms: './src/components/atoms',
           molecules: './src/components/molecules',
           organisms: './src/components/organisms',
-          navigator: './src/navigator',
+          navigators: './src/navigators',
           scenes: './src/scenes',
           services: './src/services',
           styles: './src/styles',
