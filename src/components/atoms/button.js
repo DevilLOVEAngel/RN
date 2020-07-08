@@ -1,14 +1,26 @@
 import {StyleSheet, Text, TouchableHighlight} from 'react-native';
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Button = ({title, action, buttonStyle, textStyle}) => (
-  <TouchableHighlight
-    style={{...buttonStyle, ...styles.button}}
-    onPress={action}>
-    <Text style={{...textStyle, ...styles.text}}>{title}</Text>
-  </TouchableHighlight>
-);
+const Button = props => {
+  const {title, action, buttonStyle, textStyle} = props;
+
+  return (
+    <TouchableHighlight
+      style={{...buttonStyle, ...styles.button}}
+      onPress={action}>
+      <Text style={{...textStyle, ...styles.text}}>{title}</Text>
+    </TouchableHighlight>
+  );
+};
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  buttonStyle: PropTypes.object,
+  textStyle: PropTypes.object,
+};
 
 const styles = StyleSheet.create({
   button: {

@@ -1,16 +1,29 @@
 import {StyleSheet, TextInput} from 'react-native';
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Input = ({value, placeholder, isSecureText, onChange}) => (
-  <TextInput
-    style={styles.input}
-    placeholder={placeholder}
-    secureTextEntry={isSecureText}
-    onChangeText={onChange}
-    value={value}
-  />
-);
+const Input = props => {
+  const {value, placeholder, isSecureText, onChange, inputStyle} = props;
+
+  return (
+    <TextInput
+      style={{...styles.input, ...inputStyle}}
+      placeholder={placeholder}
+      secureTextEntry={isSecureText}
+      onChangeText={onChange}
+      value={value}
+    />
+  );
+};
+
+Input.propTypes = {
+  value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  isSecureText: PropTypes.bool,
+  inputStyle: PropTypes.object,
+  onChange: PropTypes.func,
+};
 
 const styles = StyleSheet.create({
   input: {
