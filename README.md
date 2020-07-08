@@ -18,5 +18,5 @@ This a demo app using react-native.
    ```
    
 4. ```
-   react-native run-android
+   react-native run-ios
    ```
