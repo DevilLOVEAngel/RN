@@ -38,7 +38,11 @@ class ModalLogin extends React.Component {
               value={this.state.password}
             />
 
-            <Button title={'Log in'} action={this.onLogin.bind(this)} />
+            <Button
+              title={'Log in'}
+              action={this.onLogin.bind(this)}
+              buttonStyle={styles.ma10}
+            />
 
             <Text style={styles.textHighlight} onPress={this.props.changeModal}>
               Don't have a account
@@ -56,6 +60,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 22,
+  },
+  ma10: {
+    marginTop: 10,
   },
   modalView: {
     margin: 20,
@@ -77,7 +84,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   textHighlight: {
-    color: 'aqua',
+    color: 'blue',
     textAlign: 'center',
     marginTop: 15,
   },
