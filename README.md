@@ -1,22 +1,22 @@
-# RN
+# React Native demo app
 
-# Introduction 
+1. Introduction 
 This a demo app using react-native.
 
-# Running the app
-1.  ```
-    git clone https://github.com/tassdr/react-native-template.git
-    ```  
-   
-2. ```
+2. Running the app
+ - Clone project
+    ```
+    git clone https://github.com/DevilLOVEAngel/RN.git
+    ```
+ - Install denpency package
+   ```
    npm install
    ```
-       
-       
-3. ```
+ - Run demo to android device or android emulator
+   ```
    react-native run-android
    ```
-   
-4. ```
+ - Run demo to ios device or ios simulator(This task in run in mac)
+   ```
    react-native run-android
    ```
