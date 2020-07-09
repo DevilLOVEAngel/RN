@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Button = props => {
-  const {title, action, buttonStyle, textStyle} = props;
+  const {title, action, buttonStyle, textStyle, isHidden} = props;
 
   return (
     <TouchableHighlight
+      visible={!isHidden}
       style={{...buttonStyle, ...styles.button}}
       onPress={action}>
       <Text style={{...textStyle, ...styles.text}}>{title}</Text>
@@ -20,6 +21,7 @@ Button.propTypes = {
   onChange: PropTypes.func,
   buttonStyle: PropTypes.object,
   textStyle: PropTypes.object,
+  isHidden: PropTypes.bool,
 };
 
 const styles = StyleSheet.create({
